@@ -32,7 +32,7 @@ table.admin-table th{
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.\1+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
@@ -984,6 +984,7 @@ padding: 5px 20px;
 
 	position: relative;
 	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);	}
+
 .content_box a {
     text-decoration: none;
     color: #333;

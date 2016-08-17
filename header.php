@@ -8,13 +8,15 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" media="all" href="<?php schoolinfo('schoolURL'); ?>/<?php echo SCHOOL_DIR; ?>/themes/base.css" />
-<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" media="all" href="<?php stylesheet(); ?>" />
 <link href="<?php schoolinfo('schoolURL'); ?>/<?php echo INCLUDES_DIR; ?>/cropper-master/css/cropper.min.css" rel="stylesheet">
 <link href="<?php schoolinfo('schoolURL'); ?>/<?php echo INCLUDES_DIR; ?>/cropper-master/css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="<?php schoolinfo('schoolURL'); ?>/ts-includes/js/cs.main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -160,7 +162,7 @@ else{
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-profile">Edit Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-products">Manage Products</a></li>
-							<li><a href="<?php schoolinfo('schoolURL'); ?>//?view=module&path=cannabiz&action=shop-details&id=<?php echo cannabiz_get_profile_id($_SESSION['school']['user'],2); ?>">View Shop Profile</a></li>
+							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=shop-details&id=<?php echo cannabiz_get_profile_id($_SESSION['school']['user'],2); ?>">View Shop Profile</a></li>
 						</ul>
 					</li>
 					<?php endif; ?>
@@ -170,7 +172,7 @@ else{
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=vendor-profile">Edit Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=manage-vendor-products">Manage Products</a></li>
-							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=add-products">Add New Products</a></li>
+							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=custom-products">Add New Products</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=offered-products">Offered Products</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=grower-details&id=<?php echo cannabiz_get_profile_id($_SESSION['school']['user'],1); ?>">View Vendor Profile</a></li>
 						</ul>

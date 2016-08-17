@@ -1,23 +1,23 @@
 
 
-			</div>	
+			</div>
 			<?php if(LOGGED_IN): ?>
 			<div id="panel_right" class="transition">
 				<div id="extra-content"><i class="fa fa-circle-o-notch spin"></i></div>
-			</div>	
+			</div>
 			<?php endif; ?>
 		</div>
 	</div>
 	<!-- /content -->
-	
+
 	<div id="footer">
 		<div class="container">
 			<div class="padded_top10 padded_bottom10">
-				<?php 
+				<?php
 				$school_lic = get_schoolinfo('license');
 				$course_lic = get_courseinfo('courseLicense',$_SESSION['school']['active_course']);
 				$course_disclaimer = get_courseinfo('courseDisclaimer',$_SESSION['school']['active_course']);
-				
+
 				?>
 				<a href="<?php schoolinfo('schoolURL'); ?>"><?php schoolinfo('schoolName'); ?></a>
 				<?php if($course_disclaimer): ?>
@@ -33,9 +33,8 @@
 			</div>
 		</div>
 		<!-- /footer container -->
-	</div>	
+	</div>
 	<!-- /footer -->
-</div>
 <?php ts_footer(); ?>
 <script>
 jQuery(document).ready(function($){
@@ -43,28 +42,27 @@ jQuery(document).ready(function($){
 			$('#cs_overlay').fadeOut();
 			return false;
 		});
-});	
+});
 </script>
 <script>
 
 rightbar = false;
-	
+
 function panel_height(){
 	return $( window ).height()-$( '#footer' ).height() -$( '#header' ).height();
-}	
-	
-jQuery(document).ready(function($){	
+}
+
+jQuery(document).ready(function($){
 	// Panel Area Height
 	$('#panel_left').css('min-height',panel_height() );
 	//$('#logo').css('width', $('#panel_left').css('width'));
 	//$('.workspace').css('min-height',$('#panel_left').height()+$( '#footer' ).height());
-	
+
 	$( window ).resize(function() {
 		$('#panel_left').css('min-height',panel_height() );
 		//$('#logo').css('width', $('#panel_left').css('width'));
 	});
-	
-		
+
 	$('#toggle-left').click(function(){
 		if($('#panel_left').hasClass('expanded')){
 			$('#panel_center').css('padding-left','82px');
@@ -107,7 +105,7 @@ jQuery(document).ready(function($){
 		}
 		return false;
 	});
-});	
+});
 </script>
 </body>
 </html>
