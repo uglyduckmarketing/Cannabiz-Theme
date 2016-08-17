@@ -236,7 +236,9 @@ table.form_table td{padding: 5px; margin: 5px; font-size: .75em}
 	color: white;
 	text-align: center;
 	border-radius: 0px 4px 0px 0px;
-	padding: 10px 0px 0px 0px
+	padding: 10px 0px 0px 0px;
+	padding-top: 11px;
+    font-size: 17px;
 }
 
 .cannabiz_service_list .marker_tab .cb{
@@ -271,10 +273,12 @@ table.form_table td{padding: 5px; margin: 5px; font-size: .75em}
 }
 
 .shop_needed_product_category li {
-	list-style: none;
-	margin-left: 0px;
-	padding-left: 0px;
-	padding-bottom: 5px;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-top: 14px;
+    font-size: 1.6rem !important;
 }
 
 .shop_needed_product_category li:before {
@@ -380,7 +384,7 @@ to { -o-transform: rotate(360deg) scale(1) skew(0deg) translate(0px); }
 	color: rgba(0,0,0,.7);
 	list-style: none;
 	background: #88d075;
-	border: solid 1px green;
+	border: solid 1px #68D124;
 	border-radius: 5px;
 	padding: 10px 10px}
 .field-error{color: red; background: rgba(255,0,0,.2); font-size: .75em; border: solid 1px red; padding: 0px 4px; border-radius: 4px; display: block; margin: 4px 0px}
@@ -980,7 +984,12 @@ padding: 5px 20px;
 
 	position: relative;
 	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);	}
-.content_box a{text-decoration: none}
+
+.content_box a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2.5rem;
+}
 .content_box h2{margin-top: 0px; color: #677078;}
 .content_box_header{border-bottom: solid 1px #ddd; font-size: .75em; line-height: 1.2em}
 .content_box_header h2{font-size: 2em; line-height: 1em; margin: 0px; color: #8D9AA5;}
@@ -1477,7 +1486,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 	margin: 0px;
 	background: #e2e2e2;
 	border: 1px solid rgba(0,0,0,.1);
-	max-width: 800px;
+	max-width: 100%;
 	border-radius: 5px
 }
 #search_filter_bar form{
@@ -1496,8 +1505,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 	letter-spacing: 0.5px;
 	font-family: "Lato",sans-serif;
 	height: auto !important;
-
-	max-width: 800px;
+	max-width: 100%;
 	width: 150px;
 	-moz-appearance: auto !important;
 }
@@ -1516,7 +1524,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 #cannabiz_onboarding_overlay_content{
 	background: #f9f9f9;
 	width: 90%;
-	max-width: 800px;
+	max-width: 100%;
 	border-radius: 0px;
 	margin: 0px auto 0px;
 	-webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
@@ -1524,7 +1532,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 	position: relative;
 	overflow: auto;
 	max-height: 100%;
-
+	max-width: 1000px;
   	top: 50%;
   	transform: translateY(-50%);
 }
@@ -1951,7 +1959,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 
 #mobile_search_results .results_bar{
 	padding: 10px 15px;
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0px auto
 }
 
@@ -1976,7 +1984,7 @@ box-shadow: 0 2px 2px 0 #ddd;
 }
 #mobile_search_results .cannabiz_search_results li{
 	border-top: 1px solid rgba(0,0,0,.1);
-    max-width: 800px;
+    max-width: 100%;
     margin: 0px auto;
 }
 
@@ -2110,7 +2118,7 @@ h1,h2,h3,h4,h5 {
 
 .page_edit-seller-profile .content_box .padding20,.page_edit-grower-profile .content_box .padding20 {
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 100%;
 }
 
 .page_edit-seller-profile div.content_box:nth-child(4) > div:nth-child(1),.page_edit-grower-profile div.content_box:nth-child(4) > div:nth-child(1) {
@@ -2391,7 +2399,7 @@ a#header_mail_icon {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	max-width: 800px;
+	max-width: 100%;
 }
 
 .cannabiz_service_list .product_icons{display: none}
@@ -2423,7 +2431,6 @@ button,button.button {
 	font-size: 14px;
 	border-radius: 0px !important;
 	border: medium none;
-	box-shadow: 0 2px 0 0 #53A020;
 	padding: 9px 30px;
 }
 
@@ -2447,9 +2454,6 @@ a.button,a.button_profile {
 	font-weight: 400;
 	letter-spacing: .3px;
 	transition: all .3s ease;
-	-webkit-box-shadow: 0 2px 0 0 rgba(83,160,32,1);
-	-moz-box-shadow: 0 2px 0 0 rgba(83,160,32,1);
-	box-shadow: 0 2px 0 0 rgba(83,160,32,1);
 	font-family: 'Lato',sans-serif;
 }
 
@@ -2466,9 +2470,6 @@ a.button,a.button_profile {
 	font-weight: 400;
 	letter-spacing: .3px;
 	transition: all .3s ease;
-	-webkit-box-shadow: 0 2px 0 0 rgba(83,160,32,1);
-	-moz-box-shadow: 0 2px 0 0 rgba(83,160,32,1);
-	box-shadow: 0 2px 0 0 rgba(83,160,32,1);
 	font-family: 'Lato',sans-serif;
 }
 
@@ -2479,7 +2480,6 @@ a.button:hover,button:hover,button.button:hover,.button:hover,.em-button.large:h
 
 a.button_profile {
 	background: #3F474F none repeat scroll 0 0;
-	box-shadow: 0 2px 0 0 #000;
 	margin-right: 10px;
 	padding-top: 7px;
 	padding-bottom: 9px;
@@ -2517,7 +2517,7 @@ a.button_profile:hover {
 }
 
 form.form1.form2,form {
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -2535,7 +2535,7 @@ label {
 }
 
 .form2 input[type="text"],.form2 input[type="email"],.form2 textarea,.form2 select,.form2 legend,input[type="text"],input[type="email"],textarea,select,legend {
-	max-width: 800px;
+	max-width: 100%;
 	width: 100%;
 }
 
@@ -2599,7 +2599,7 @@ input.profle_edit_hours_input {
 #members {
 	display: none;
 	border-top: 1px solid #ddd;
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding-top: 50px;
 }
@@ -2627,11 +2627,12 @@ input.profle_edit_hours_input {
 /* Connections */
 
 .service_box {
-	border: none !important;
-	border-radius: 0px !important;
-	-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.15) !important;
-	-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.15) !important;
-	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.15) !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border-radius: 0px !important;
+    margin-top: 30px;
 }
 
 .marker_tab {
@@ -2730,16 +2731,16 @@ br {
 }
 
 .image img, .public_profile_image img, .public_profile_shop_image img {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	height: 100%;
-	-webkit-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	max-width: 250px;
-	max-height: 250px;
-	height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    min-width: 250px;
+    height: auto;
 }
 
 ul.cannabiz_list_connections {
@@ -2748,8 +2749,9 @@ ul.cannabiz_list_connections {
 }
 
 .cannabiz_list_connections_box .image {
-	width: 150px;
-	height: 150px;
+    width: 150px;
+    height: 150px;
+    margin-top: 17px;
 }
 
 .cannabiz_list_connections_box .image img {
@@ -2806,7 +2808,10 @@ ul.cannabiz_list_connections {
 
 .shop_needed_products h3 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    font-weight: 500;
+    padding: 15px 0px;
+    margin: 0px;
+    color: #D0D3CF;
+    font-size: 1.45em;
 }
 
 .page_seller-products input[type="checkbox"] {
@@ -3084,6 +3089,11 @@ h2.reviewer_name {
 	background: #f9f9f9;
 }
 
+.message_info {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 #send_message_area {
 	bottom: 0;
 	width: 100%;
@@ -3092,19 +3102,29 @@ h2.reviewer_name {
 }
 
 #send_message_area textarea {
-	height: 100px !important;
-	width: 80%;
-	resize: none;
-	float: left;
-	padding-right: 140px;
+    height: 100px !important;
+    resize: none;
+    float: left;
+    padding: 20px;
+    padding-right: 170px;
+    position: fixed;
+    left: 301px;
+    border-radius: 0px !important;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.2);
+    border-left: 1px solid rgba(0,0,0,.1);
+    width: calc(100% - 301px) !important;
+    bottom: -7px;
 }
 
 #send_message_area button {
-	float: left;
-	display: inline;
-	position: absolute;
-	margin-left: -115px;
-	margin-top: 50px;
+    display: inline;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    font-size: 1.7rem;
+    padding: 15px 30px;
+    border-radius: 2px !important;
 }
 
 #message_area {
@@ -3190,6 +3210,12 @@ input:checked+label.select_option {
 	border: 2px solid #75D436;
 }
 
+input[type=checkbox], input[type=radio] {
+    margin-right: 11px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .page_register .workspace {
 	background: #3F474F;
 }
@@ -3265,7 +3291,7 @@ h1.register-title {
 }
 
 .choose-package {
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
@@ -3463,7 +3489,9 @@ ul.cannabiz_service_list i:nth-child(2) {
 }
 
 .bio {
-	margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.55rem;
+    margin-top: 10px;
 }
 
 .service_box {
@@ -3504,23 +3532,26 @@ select {
 }
 
 @media only screen and (max-width: 960px) {
-.search_bar {
-	display: none;
+	.search_bar {
+		display: none;
+	}
+
+	.product_list .product_image{margin-left: 7px;}
+
+	.image img, .public_profile_image img, .public_profile_shop_image img {
+		max-height: 130px;
+		max-width: 130px;
+	}
+
+	input {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
 }
 
-.product_list .product_image{margin-left: 7px;}
-
-.image img, .public_profile_image img, .public_profile_shop_image img {
-	max-height: 130px;
-	max-width: 130px;
+.page_dashboard {
+	padding-bottom: 60px;
 }
-
-input {
-	width: 100% !important;
-	max-width: 100% !important;
-}
-}
-
 
 .dashboard_widget{
 	background: #FFF none repeat scroll 0% 0%;
@@ -3543,6 +3574,19 @@ input {
 	color: #3F474F;
 	margin-bottom: 15px;
 }
+
+.img-responsive {
+	min-width: 100%;
+}
+
+#dashboard_search_network_button {
+    display: block;
+    padding: 15px;
+    border-radius: 2px;
+    text-decoration: none !important;
+    font-size: 1.65rem;
+}
+
 #vendor_categories_widget .vendorproduct_column .title {text-align: center;font-weight: bold;font-size: .85em;background: #3f474f;color: #fff;}
 
 #vendor_categories_widget .vendorproduct_column {
@@ -3587,6 +3631,7 @@ input, select {
 	border-right: none !important;
 	border-top: none !important;
 	border-color: rgba(0,0,0,.1) !important;
+	min-width: 100%;
 }
 
 textarea {
@@ -3616,11 +3661,6 @@ Components
 	max-width: 1080px !important;
 }
 
-.cb-panel form {
-	max-width: 700px;
-	margin: 0 auto;
-}
-
 @keyframes fadeUp { from { margin-top: 22px; opacity:0; opacity: 1\9; /* IE9 only */ } to { margin-top: 0px; opacity:1; } }
 
 .cb-panel {
@@ -3641,6 +3681,10 @@ Components
 	padding: 25px;
 	border: 1px solid #dce0e0;
 	margin-bottom: 35px;
+}
+
+.cb-panel form {
+	padding: 0px 20px;
 }
 
 .panel-header {
@@ -3698,6 +3742,7 @@ DASHBOARD
     padding: 10px;
     width: 100%;
     left: 0;
+    text-align: center;
 }
 
 #cannabiz_alerts a {
@@ -3707,7 +3752,7 @@ DASHBOARD
 
 .intro-hero {
 	width: 100%;
-	background: url("https://canna.biz/wp-content/uploads/2016/07/sativa.jpg");
+	background: url("images/sativa.jpg");
 	background-color: #3F474F;
 	border-bottom: 1px solid #dce0e0;
 	height: 385px;
@@ -3759,27 +3804,37 @@ DASHBOARD
 }
 
 .dashboard-start .dash-user-image {
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    text-align: center;
+    background: #f9f9f9;
 }
 
 .dashboard-start .dash-user-image img {
-    max-width: 150px;
-    border: 3px solid #fff;
-    margin-top: -44px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	max-width: 100%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 .no_image {
-    background: #C1C1C1 url("//x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg") no-repeat scroll center center / cover;
+    background: #C1C1C1 url("images/nobody.jpg") no-repeat scroll center center / cover;
     display: block;
     position: absolute;
-    z-index: 6;
-    height: 140px;
-    width: 140px;
-    max-width: 150px;
-    border: 3px solid #fff;
-    margin-top: -44px;
+    z-index: 1;
+    width: 100%;
 }
 
 .dash-user-information {
@@ -4097,7 +4152,7 @@ Vendor Profile
     font-weight: 400;
     font-size: 14px;
     position: absolute;
-    margin-top: 77px;
+    margin-top: 73px;
     z-index: 5;
     color: #fff;
     cursor: pointer;
@@ -4122,13 +4177,29 @@ Vendor Profile
 	padding-left: 35px;
 }
 
-.user-image img {
-    max-width: 215px;
+.user-image-container {
+    max-width: 210px;
+    overflow: hidden;
+    max-height: 210px;
     position: absolute;
-    border-radius: 2px;
-    z-index: 2;
-    margin-top: -100px;
+    background: #f9f9f9;
+    width: 210px;
+    height: 210px;
+    margin-top: -105px;
+    left: 0;
     border: 3px solid #fff;
+    border-radius: 3px;
+}
+
+.user-image img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	max-width: 210px;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
 .user-information {

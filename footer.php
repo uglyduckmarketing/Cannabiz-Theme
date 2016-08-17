@@ -63,7 +63,6 @@ jQuery(document).ready(function($){
 		//$('#logo').css('width', $('#panel_left').css('width'));
 	});
 
-
 	$('#toggle-left').click(function(){
 		if($('#panel_left').hasClass('expanded')){
 			$('#panel_center').css('padding-left','82px');
