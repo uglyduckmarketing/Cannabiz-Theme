@@ -120,7 +120,7 @@ else{
 	</div>
 </div>
 <?php else: ?>
-	<scrip>var cbuser = '0';</scrip>
+	<script>var cbuser = '0';</script>
 <?php endif; ?>
 
 
@@ -143,7 +143,7 @@ else{
 					</li>
 					<?php if(LOGGED_IN): ?>
 					<li class="dropdown temp-title">
-						<a href="#"><i class="ion-search"></i><span class="menu-item-title">Find Services</span></a>
+						<a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=search"><i class="ion-search"></i><span class="menu-item-title">Search</span></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=find-service&service=1">Search Vendors</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=find-service&service=2">Search Shops</a></li>
@@ -158,7 +158,7 @@ else{
 				<ul class="cb-right-navigation">
 					<?php if(cannabiz_is_seller()): ?>
 					<li class="dropdown">
-						<a href="#">Shop Information<i class="ion-gear-b"></i></a>
+						<a href="#"><span class="menu-item-title">Shop Information</span><i class="ion-gear-b"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-profile">Edit Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-products">Manage Products</a></li>
@@ -180,21 +180,21 @@ else{
 					<?php endif; ?>
 					<?php if(!cannabiz_is_seller() && !cannabiz_is_grower()): ?>
 					<li class="dropdown">
-						<a href="#">Shop Information<i class="ion-gear-b"></i></a>
+						<a href="#"><span class="menu-item-title">Shop Info</span><i class="ion-gear-b"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-profile">Edit Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=seller-products">Manage Products</a></li>
-							<li><a href="<?php schoolinfo('schoolURL'); ?>//?view=module&path=cannabiz&action=shop-details&id=">View Shop Profile</a></li>
+							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=shop-details&id=<?php echo cannabiz_get_profile_id($_SESSION['school']['user'],2); ?>">View Shop Profile</a></li>
 						</ul>
 					</li>
-					<li class="dropdown">
-						<a href="#">Vendor Information<i class="ion-gear-b"></i></a>
+					<li class="dropdown temp-title">
+						<a href="#"><span class="menu-item-title">Vendor Info</span><i class="ion-gear-b"></i></a>
 						<ul class="dropdown-menu">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=vendor-profile">Edit Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=manage-vendor-products">Manage Products</a></li>
-							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=add-products">Add New Products</a></li>
+							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=custom-products">Add New Products</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=offered-products">Offered Products</a></li>
-							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=grower-details&id=">View Vendor Profile</a></li>
+							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=grower-details&id=<?php echo cannabiz_get_profile_id($_SESSION['school']['user'],1); ?>">View Vendor Profile</a></li>
 						</ul>
 					</li>
 					<?php endif; ?>
@@ -204,18 +204,20 @@ else{
 					<li class="temp-title">
 						<a href="<?php echo get_schoolinfo('schoolURL'); ?>/?view=module&path=cannabiz&action=messages"><span class="menu-item-title">Messages</span><i class="ion-chatbubbles"></i><?php if(unread_messages($_SESSION['school']['user'])) echo '<i class="fa fa-circle" style="color: #00ff00; margin-left: -15px; font-size: 12px"></i>'; ?></a>
 					</li>
-					<li class="user-account dropdown">
-						<?php echo get_profile_photo(); ?>
-						<span class="user-name menu-item-title">
-						<?php $greeting = get_option('user_greeting','first_name'); ?>
-						<?php if($greeting == 'first_name'): ?>
-						<?php echo get_user_data($_SESSION['school']['user'],'firstName'); ?>
-						<?php else: ?>
-						<?php echo $_SESSION['school']['user_name']; ?>
-						<?php endif; ?>
-						</span>
-						<i class="ion-arrow-down-b"></i>
-						<ul class="dropdown-menu">
+					<li id="account-switch" class="user-account dropdown">
+						<div id="account-switcher">
+							<?php echo get_profile_photo(); ?>
+							<span class="user-name menu-item-title">
+							<?php $greeting = get_option('user_greeting','first_name'); ?>
+							<?php if($greeting == 'first_name'): ?>
+							<?php echo get_user_data($_SESSION['school']['user'],'firstName'); ?>
+							<?php else: ?>
+							<?php echo $_SESSION['school']['user_name']; ?>
+							<?php endif; ?>
+							</span>
+							<i class="ion-arrow-down-b"></i>
+						</div>
+						<ul class="dropdown-menu account-options">
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=profile">Personal Profile</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=profile-photo">Profile Photo</a></li>
 							<li><a href="<?php schoolinfo('schoolURL'); ?>/?view=account">Account Settings</a></li>
@@ -224,6 +226,16 @@ else{
 						</ul>
 					</li>
 				</ul>
+				<script>
+					jQuery(document).ready(function($){
+						$('#account-switch').click(function(){
+							$( "#account-switch .account-options" ).toggleClass( "account-options-open" );
+						});
+						$('#page-contents').click(function(){
+							$( "#account-switch .account-options" ).removeClass( "account-options-open" )
+						});
+					});
+				</script>
 				<?php else:?>
 				<?php if($_GET['view'] != 'login'): ?>
 				<a class="header_login_button" href="<?php schoolinfo('schoolURL'); ?>/?view=login">Log In</a>

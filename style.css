@@ -635,7 +635,7 @@ box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
 .margin_right60{margin-right: 60px}
 /* Login Page */
 .body_page_login{background: #3F474F}
-.page_login{height: 100%}
+.page_login{height: 100%; padding-top: 62px}
 .login_form{width: 100%; max-width: 400px; margin:0px auto}
 .login_form form{background: #eee; padding: 20px; border: 1px solid rgba(0,0,0,.1);border-radius: 2px}
 .login_form .login_form_text{text-align: center; margin-bottom: 20px}
@@ -4138,6 +4138,10 @@ HEADER
     color: #EFEFEF !important;;
 }
 
+.user-account .account-options-open{
+	display: block;
+}
+
 /*
 =========================================================
 Vendor Profile
@@ -4331,6 +4335,10 @@ button .btn {
 .remove-btn:hover {
 	background: #e74c3c !important;
 	color: #fff;
+}
+
+#page-contents {
+    padding-top: 62px;
 }
 
 /*
